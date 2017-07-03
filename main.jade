@@ -1,0 +1,589 @@
+doctype html
+html
+  head
+    include _head
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот 
+        a(href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank") инструкции,
+        | как включить JavaScript в вашем браузере. 
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    .page-wrap
+      //progress-box
+      .progress-counter.progress-counter--animating(style='top: 30%;')
+        .progress-counter__outer
+        .progress-counter__inner
+        .js-progress-counter 0%
+      include _left-fixed_nav
+      // wrapper start
+      .wrapper
+        // header SECTION
+        include _header
+        // header SECTION
+        // first-section
+        section.first-section
+          .bg1.bg-animate(style="background:url(images/bg1.jpg)")
+          //.bg2.bg-animate(style="background:url(images/bg1.jpg)")
+          //.bg3.bg-animate(style="background:url(images/bg1.jpg)")
+          .next-step.js_next
+        //peop section
+        section.peop-section.animated(data-animation="InDown")
+          .peop-col.peop-col--1(data-peop="1")
+            .people-item(style="background:url(images/peop1.jpg) no-repeat")
+          .peop-col.peop-col--2(data-peop="2")
+            .people-item(style="background:url(images/peop2.jpg) no-repeat")
+          .peop-col.peop-col--3
+            .peop-info.peop-info-def
+              .peop-info__head
+                img(src="images/logo.png",alt="")
+                span Стоматология   White&White
+              .peop-info__txt
+                | Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием.
+              a(href="#").btn.btn--white.waves-light.waves-effect Наша команда
+            .peop-info(data-info="2")
+              .peop-info__head
+                img(src="images/logo.png",alt="").logo-min
+                span Кроливец Игорь Валерьевич
+                .peop-prof
+                  | Врач-стоматолог
+              .peop-info__txt
+                .peop-bq
+                  | Главное в нашей клинике  - это люди. Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием.
+            .peop-info(data-info="1")
+              .peop-info__head
+                img(src="images/logo.png",alt="").logo-min
+                span Кроливец Татьяна Валерьевич
+                .peop-prof
+                  | Врач-стоматолог
+              .peop-info__txt
+                .peop-bq
+                  | Главное в нашей клинике  - это люди. Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием.
+        //our-plus section
+        section.our-plus
+          .container
+            .heading-section.align-center Наши преимущества
+            .row
+              .col.l3.m6.s12.animated(data-animation="InDown")
+                .our-plus-item
+                  .our-plus-item__icon
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                      g
+                        g
+                          rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                        g
+                          rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                          rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                    span.icon-microscope
+                  .our-plus-item__txt
+                    span  Точность и прецизионность             работы Точность и прецизионность             работы
+                    | Приходите на прием исключительно в удобное Вам время
+              .col.l3.m6.s12.animated(data-animation="InDown")
+                .our-plus-item
+                  .our-plus-item__icon
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                      g
+                        g
+                          rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                        g
+                          rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                          rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                    span.icon-gloves
+                  .our-plus-item__txt
+                    span Контроль стерильности
+                    | Приходите на прием исключительно в удобное Вам время
+              .col.l3.m6.s12.animated(data-animation="InDown")
+                .our-plus-item
+                  .our-plus-item__icon
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                      g
+                        g
+                          rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                        g
+                          rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                          rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                    span.icon-molecule
+                  .our-plus-item__txt
+                    span Использование цифровых                 технологий
+                    | Приходите на прием исключительно в удобное Вам время
+              .col.l3.m6.s12.animated(data-animation="InDown")
+                .our-plus-item
+                  .our-plus-item__icon
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                      g
+                        g
+                          rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                        g
+                          rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                          rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                    span.icon-Dialog
+                  .our-plus-item__txt
+                    span Говорим на одном                языке
+                    | Приходите на прием исключительно в удобное Вам время
+        //uslugi section
+        section.uslugi-section.animated(data-animation="InDown")
+          .heading-section.align-center Услуги
+          .slider-wrapp
+            ul.slider-controls
+              li.active(data-slide='1')
+                a(href='') Slide 1
+              li.inactive(data-slide='2')
+                a(href='') Slide 2
+              li.inactive(data-slide='3')
+                a(href='') Slide 3
+            ul.slider-arrows
+              li.previous
+                a(href='') Previous
+              li.count 01
+              li.next
+                a(href='') Next
+            .slider
+              ul
+                li.active(data-slide='1')
+                  .panel-1
+                    div
+                      .img(style='background: url("images/img-slider.jpg") center center no-repeat;')
+                  .panel-2
+                    div
+                      .img(style='background: url("images/img-slider.jpg") center center no-repeat;')
+                  .panel-3
+                    div
+                      .img(style='background: url("images/img-slider.jpg") center center no-repeat;')
+                  .infos
+                    a(href='#')
+                      div
+                        span.go-to-razd Раздел Диагностика
+                          span.to-next-ic
+                            img(src="images/arrow-right.png",alt="")
+                        span.sld-head Телерентгенограмма
+                        p Для того чтобы лечение было эффективным, необходима точная диагностика состояния зубов.
+                    .timer
+                li.inactive(data-slide='2')
+                  .panel-1
+                    div
+                      .img(style='background: url("images/news1.jpg") center center no-repeat;')
+                  .panel-2
+                    div
+                      .img(style='background: url("images/news1.jpg") center center no-repeat;')
+                  .panel-3
+                    div
+                      .img(style='background: url("images/news1.jpg") center center no-repeat;')
+                  .infos
+                    a(href='#')
+                      div
+                        span.go-to-razd Раздел Диагностика
+                          span.to-next-ic
+                            img(src="images/arrow-right.png",alt="")
+                        span.sld-head Телерентгенограмма
+                        p Для того чтобы лечение было эффективным, необходима точная диагностика состояния зубов.
+                    .timer
+                li.inactive(data-slide='3')
+                  .panel-1
+                    div
+                      .img(style='background: url("images/price-bg.jpg") center center no-repeat;')
+                  .panel-2
+                    div
+                      .img(style='background: url("images/price-bg.jpg") center center no-repeat;')
+                  .panel-3
+                    div
+                      .img(style='background: url("images/price-bg.jpg") center center no-repeat;')
+                  .infos
+                    a(href='#')
+                      div
+                        span.go-to-razd Раздел Диагностика
+                          span.to-next-ic
+                            img(src="images/arrow-right.png",alt="")
+                        span.sld-head Телерентгенограмма
+                        p Для того чтобы лечение было эффективным, необходима точная диагностика состояния зубов.
+                    .timer
+        //pravila section
+        section.regulations-section
+          .container.clearfix.animated(data-animation="InDown")
+            .border-box
+            .regulations-box
+              .regulations-box__head
+                span Правило первого приема, с чего начать?
+                | Начать решать проблему очень просто, не стоит откладывать это на завтрашний день
+              .row
+                .col.l4.s12
+                  .regulations-item
+                    .regulations-item__icon
+                      svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                        g
+                          g
+                            rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                            rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          g
+                            rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                            rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                      span.icon-forma
+                    .regulations-item__txt
+                      span Заполнить форму на бесплатную консультацию
+                .col.l4.s12
+                  .regulations-item
+                    .regulations-item__icon
+                      svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                        g
+                          g
+                            rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                            rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          g
+                            rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                            rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                      span.icon-question
+                    .regulations-item__txt
+                      span Получить исчерпывающую информацию о интересующем вопросе
+                .col.l4.s12
+                  .regulations-item
+                    .regulations-item__icon
+                      svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='117px', height='121.193px', viewbox='0 0 117 121.193', enable-background='new 0 0 117 121.193', xml:space='preserve')
+                        g
+                          g
+                            rect(x='10.49', y='2.365', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                            rect.anim-path(x='10.49', y='2.365', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='96.029', height='116.458')
+                          g
+                            rect(x='2.365', y='13.008', fill='none', stroke='#e4e4e4', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+                            rect.anim-path.anim-path--2(x='2.365', y='13.008', fill='none', stroke='#cacaca', stroke-width='2', stroke-miterlimit='10', width='112.27', height='95.178')
+
+                      span.icon-calendar
+                    .regulations-item__txt
+                      span Забронировать дату и время приема лечащего врача
+            .regulations-img-box(style="background:url(images/reg-box.jpg) no-repeat")
+          .regulations-section-center.clearfix.animated(data-animation="InDown")
+            .container.clearfix
+              .regulations-img-box(style="background:url(images/reg-box2.jpg) no-repeat")
+              .regulations-form-box
+                .regulations-form-box__head Записаться на прием
+                form(action="#").js_validate
+                  .row
+                    .col.l6.m6.s12
+                      .input-field.required-field(data-error='Required field')
+                        input#input1(type="text",required)
+                        label(for="input1") Имя*
+                    .col.l6.m6.s12
+                      .input-field.required-field(data-error='Required field')
+                        input#input2(type="tel",required,data-validate="phone")
+                        label(for="input2") +380*
+                    .col.l6.m6.s12
+                      .input-field.required-field(data-error='Required field')
+                        input#input3(type="email",required,data-validate="email")
+                        label(for="input3") E-mail*
+                    .col.l6.m6.s12
+                      .input-field.required-field(data-error='Required field')
+                        input#input4(type="text",required)
+                        label(for="input4") Страна, город*
+                  .row
+                    span.label-field Причины обращения
+                    .col.l6.m6.s12
+                      .check-item
+                        input#check1.filled-in(type='checkbox', checked='checked')
+                        label(for='check1') Острая боль
+                      .check-item
+                        input#check2.filled-in(type='checkbox')
+                        label(for='check2') Эстетика
+                      .check-item
+                        input#check3.filled-in(type='checkbox')
+                        label(for='check3') Детская стоматология
+                    .col.l6.m6.s12
+                      .check-item
+                        input#check4.filled-in(type='checkbox', checked='checked')
+                        label(for='check4') Проблемы с деснами
+                      .check-item
+                        input#check5.filled-in(type='checkbox')
+                        label(for='check5') Чувствительность
+                      .check-item
+                        input#check6.filled-in(type='checkbox')
+                        label(for='check6') Другое
+
+
+                  button(type="submit").center-button.btn.waves-effect.waves-light Отправить
+                  .warn-box
+                    | Мы свяжемся с Вами в ближайшее время
+                    br
+                    | для согласования деталей
+          .regulations-section-bott.clearfix.animated(data-animation="InDown")
+            .regulations-section-bott__container.clearfix
+              .work-time-box
+                span Или вы можете навестить нас в  рабочее время
+                ul
+                  li Понедельник : 8:00 - 20:00
+                  li Вторник : 8:00 - 20:00
+                  li Среда : 8:00 - 20:00
+                  li Четверг : 8:00 - 20:00
+                  li Пятница : 8:00 - 20:00
+                  li Суббота : 8:00 - 20:00
+                  li Воскресенье : не рабочий день
+              .regulations-box-info
+                div.clearfix
+                  span Вне зависимости от  графика работы мы оказываем скорую зубную медицинскую помощь-консультацию
+                  | Вне зависимости от  графика работы мы оказываем скорую зубную медицинскую помощь-консультацию
+                a(href="#").center-button.btn.waves-light.waves-effect Нужна помощь
+        //news section
+        section.news-section.animated(data-animation="InDown")
+          .container
+            .heading-section.heading-with-lnk.align-center.clearfix
+              | Свежие публикации
+              a(href="#").head-lnk
+                | Все публикаци
+                span.to-next-ic
+                  img(src="images/arrow-right.png",alt="")
+            .row
+              .col.l8.m12.s12
+                a(href="#").news-big-item.news-item
+                  .news-big-item-img
+                    div(style="background:url(images/news1.jpg) no-repeat")
+                  .news-big-item-caption
+                    .news-date 14 сентября 2016
+                    .news-head White&White – первая прозрачная   стоматология в Харькове
+                    .news-txt
+                      | Жизнь не только стоматология. — подумали мы, и, проигнорировав прогноз погоды, предвещающий дождь, собрались веселой компанией на грандиозном харьковском велодне.
+                      span.detail
+                        span.to-next-ic
+                          img(src="images/arrow-right.png",alt="")
+              .col.l4.m12.s12
+                a(href="#").news-small-item.news-item
+                  .news-big-item-img
+                    div(style="background:url(images/news1.jpg) no-repeat")
+                  .news-big-item-caption
+                    .news-date
+                      span.icon-calendar2
+                      | 14 сентября 2016
+                    .news-head White&White – первая прозрачная стоматология в Харькове
+                    .news-txt
+                      span.detail
+                        span.to-next-ic
+                          img(src="images/arrow-right.png",alt="")
+                a(href="#").news-small-item.news-item
+                  .news-big-item-img
+                    div(style="background:url(images/news1.jpg) no-repeat")
+                  .news-big-item-caption
+                    .news-date
+                      span.icon-calendar2
+                      | 14 сентября 2016
+                    .news-head White&White – первая прозрачная стоматология в Харькове
+                    .news-txt
+                      span.detail
+                        span.to-next-ic
+                          img(src="images/arrow-right.png",alt="")
+        //testimonilas-section
+        section.testimonials-section.animated(data-animation="InDown")
+          .container
+            .heading-section.heading-with-lnk.align-center
+              | Отзывы
+              a(href="#").head-lnk
+                | Все отзывы
+                span.to-next-ic
+                  img(src="images/arrow-right.png",alt="")
+            .subheading Smile House – это не только первая прозрачная стоматология в Харькове, но и дом для команды профессионалов, которые с удовольствием и радостью позаботятся о вашей улыбке и вы сами сможете убедиться, на сколько неожиданным и приятным может стать знакомство с нами.
+            .testimonials-container
+              .swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    a(href="images/testi.jpg",data-fancybox="gallery").testimonials-item
+                      .testimonials-item__left
+                        .testimonials-item__img
+                          img(src="images/peop.jpg",alt="")
+                        span Светлана,
+                          br
+                          | учитель
+                      .testimonials-item__right
+                        img(src="images/testi.jpg",alt="")
+                  .swiper-slide
+                    a(href="images/testi.jpg",data-fancybox="gallery").testimonials-item
+                      .testimonials-item__left
+                        .testimonials-item__img
+                          img(src="images/peop.jpg",alt="")
+                        span Светлана,
+                          br
+                          | учитель
+                      .testimonials-item__right
+                        img(src="images/testi.jpg",alt="")
+                  .swiper-slide
+                    a(href="images/testi.jpg",data-fancybox="gallery").testimonials-item
+                      .testimonials-item__left
+                        .testimonials-item__img
+                          img(src="images/peop.jpg",alt="")
+                        span Светлана,
+                          br
+                          | учитель
+                      .testimonials-item__right
+                        img(src="images/testi.jpg",alt="")
+        //about-us
+        section.about-us
+          .container
+            .heading-section.align-center Клиника White&White - это
+            .about-us-char.animated(data-animation="InDown")
+              .about-us-char__left
+                .char-item.char-item--top
+                  i.line
+                  i.line
+                  span.count 100
+                  | довольных
+                  br
+                  | клиентов
+                .char-item
+                  i.line
+                  span.count 120
+                  | довольных
+                  br
+                  | клиентов
+                .char-item.char-item--bottom
+                  i.line
+                  i.line
+                  span.count 130
+                  | довольных
+                  br
+                  | клиентов
+              .about-us-char__middle
+                img(src="images/Bukva.svg",alt="").img-fon
+                img(src="images/about.jpg",alt="")
+              .about-us-char__right
+                .char-item.char-item--top
+                  i.line
+                  i.line
+                  span.count 80
+                  | довольных
+                  br
+                  | клиентов
+                .char-item
+                  i.line
+                  span.count 12
+                  | довольных
+                  br
+                  | клиентов
+                .char-item.char-item--bottom
+                  i.line
+                  i.line
+                  span.count 13
+                  | довольных
+                  br
+                  | клиентов
+        // sertificat section
+        section.sertificat-section.animated(data-animation="InDown")
+          .container
+            .heading-section.align-center Сертификаты
+          .sertificat-slider-cont
+            .container
+              .swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .sertificat-item
+                      a(href="images/sert.jpg",data-fancybox="gallery2").sert-img
+                        img(src="images/sert.jpg",alt="")
+                      .sertificat-info
+                        .sert-head
+                          | Сертификат
+                          span Лучшая стоматологическая клиника
+                        .sert-txt
+                          | Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием.
+                  .swiper-slide
+                    .sertificat-item
+                      a(href="images/sert.jpg",data-fancybox="gallery2").sert-img
+                        img(src="images/sert.jpg",alt="")
+                      .sertificat-info
+                        .sert-head
+                          | Сертификат
+                          span Клиника года
+                        .sert-txt
+                          | Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием.
+                  .swiper-slide
+                    .sertificat-item
+                      a(href="images/sert.jpg",data-fancybox="gallery2").sert-img
+                        img(src="images/sert.jpg",alt="")
+                      .sertificat-info
+                        .sert-head
+                          | Сертификат
+                          span Клиника года
+                        .sert-txt
+                          | Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием.
+                  .swiper-slide
+                    .sertificat-item
+                      a(href="images/sert.jpg",data-fancybox="gallery2").sert-img
+                        img(src="images/sert.jpg",alt="")
+                      .sertificat-info
+                        .sert-head
+                          | Сертификат
+                          span Клиника года
+                        .sert-txt
+                          | Мы с радостью
+              .swiper-button-prev
+                span.to-next-ic
+                  img(src="images/arrow-right.png",alt="")
+                | Предыдущий
+
+              .swiper-button-next
+                | Следующий
+                span.to-next-ic
+                  img(src="images/arrow-right.png",alt="")
+          .container
+            .sertificat-text-container
+              .row
+                .col.l6.s12
+                  | Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием. Мы поможем найти выход из ситуации любой сложности и предоставим для этого всё лучшее: необходимое оборудование, только проверенные материалы и научно обоснованные методики лечения, наше внимание и заботу. Нам всегда можно довериться!
+                .col.l6.s12
+                  | Мы с радостью предоставляем вам знания и умения наших специалистов, которые всегда идут в ногу со временем и постоянно работают над своим совершенствованием. Мы поможем найти выход из ситуации любой сложности и предоставим для этого всё лучшее: необходимое оборудование, только проверенные материалы и научно обоснованные методики лечения, наше внимание и заботу. Нам всегда можно довериться!
+        //contact section
+        section.contact-section
+          .mab-box.animated(data-animation="InDown")
+            #map(data-coords="50.000868, 36.239149")
+          .container.animated(data-animation="InDown")
+            .row
+              .contact-box
+                .contact-box-head Как нас найти?
+                address м. Архитектора Бекетова/м. Университет, ул. Алчевских (Артема), 2
+                ul.phone-group
+                  li.icon-vodafone
+                    a(href='tel:0950550203') (095) 055 02 03
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-lifecell
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-02-kievstar
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-close-envelope
+                    a(href='mailto:smile.house.kh@gmail.com') smile.house.kh@gmail.com
+                  li.icon-skype
+                    a(href='skype:smile.house.kh') smile.house.kh
+                  li.icon-phone-mini
+                    a(href='tel:0505742668') (050) 574 26 68
+              .col.l7.m12.s12.right
+                .contact-form.animated-delay300.animated(data-animation="InDown")
+                  form(action="#").form.js_validate
+                    .form-head Связяться с нами
+                    .row
+                      .col.l6.m12.s12
+                        .input-field.required-field(data-error='Required field')
+                          input#input10(type="text",required)
+                          label(for="input10") Имя*
+                      .col.l6.m12.s12
+                        .input-field.required-field(data-error='Required field')
+                          input#input11(type="tel",required)
+                          label(for="input11") Телефон*
+                    .input-field.required-field(data-error='Required field')
+                      textarea.materialize-textarea#input12(required)
+                      label(for="input12") Сообщение*
+                    button.btn.waves-effect.waves-light(type='submit') Отправить
+      //footer
+      include _footer
+

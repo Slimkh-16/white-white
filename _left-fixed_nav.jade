@@ -1,0 +1,116 @@
+.left-container
+  .menu-button-general(data-activates="slide-out")
+    span
+    span
+    span
+    i Меню
+  .left-container-nav
+    ul
+      li
+        span.icon-phone-call
+      li
+        span.icon-share
+      li.last.js_fast_form
+        span.icon-plus-black-symbol
+  .form-fast
+    .form-fast__head Скорая зубная помощь
+      span Напишите свое имя и номер телефона   и мы Вам перезвоним
+    form(action="#").js_validate
+      .row
+        .col.l6.s12
+          .input-field.required-field(data-error='Required field')
+            input#field1(type='text', required='')
+            label(for="field1") Как Вас зовут?*
+        .col.l6.s12
+          .input-field.required-field(data-error='Required field')
+            input#field2(type='text', required='')
+            label(for="field2") Куда Вам позвонить?*
+      button(type="submit").btn.waves-light.waves-effect Отправить
+.left-fixed-nav.side-nav#slide-out
+  .left-fixed-nav__body
+    .left-fixed-nav__over
+      ul
+        li.with-menu
+          span.drop-nav.icon-Right-arrow(data-menu="1")
+          a(href="#").with-menu-lnk
+            | О нас
+          .left-menu-level(data-menu="1")
+            .menu-level-head О нас
+            .menu-level-back.js_back_menu
+              | Назад
+              span.icon-Right-arrow
+            ul
+              li
+                a(href='#') О нас
+              li
+                a(href='#') О нас
+              li
+                a(href='#') О нас
+              li
+                a(href='#') О нас
+        li.with-menu
+          span.drop-nav.icon-Right-arrow(data-menu="2")
+          a(href="#")
+            | Услуги
+          .left-menu-level(data-menu="2")
+            .menu-level-head Услуги
+            .menu-level-back.js_back_menu
+              | Назад
+              span.icon-Right-arrow
+            ul
+              li
+                a(href='#') Диагностика
+              li
+                a(href='#') Гигиена
+              li
+                a(href='#') Парадонтология
+              li
+                a(href='#') Терапия (лечение зубов)
+              li
+                a(href="#") Кулоны
+              li
+                a(href="#") Имплантация зубов
+              li
+                a(href="#") Детская стоматология
+              li
+                a(href="#") Ортодонтия (брекеты)
+              li
+                a(href="#") Протезирование зубов
+              li
+                a(href="#") Косметическая стоматология
+              li
+                a(href="#") Отбеливание зубов
+              li
+                a(href="#") Лечение в медикаментозном сне
+              li
+                a(href="#") Удаление зубов
+        li
+          a(href="#")
+            | ОТзывы
+        li
+          a(href="#")
+            | Публикации
+        li
+          a(href="#")
+            | Контакты
+  .left-fixed-nav__bottom
+    ul.phone-group
+      li.icon-vodafone
+        a(href="tel:0950550203") (095) 055 02 03
+        a(href="tel:0505742668") (050) 574 26 68
+      li.icon-lifecell
+        a(href="tel:0505742668") (050) 574 26 68
+      li.icon-02-kievstar
+        a(href="tel:0505742668") (050) 574 26 68
+      li.icon-phone-mini
+        a(href="tel:0505742668") (050) 574 26 68
+    ul.social-group
+      li
+        a(href="#").icon-vk-social-network-logo
+      li
+        a(href="#").icon-facebook-logo
+      li
+        a(href="#").icon-instagram-logo
+    span.fast-help.js_fast_form Скорая зубная помощь
+
+

@@ -1,0 +1,168 @@
+$icon_font_name:"Icons";
+@font-face {
+	font-family:$icon_font_name;
+	src: url('fonts/Icons.eot');
+	src: url('fonts/Icons.eot?#iefix') format('eot'),
+	url('fonts/Icons.woff') format('woff'),
+	url('fonts/Icons.ttf') format('truetype'),
+	url('fonts/Icons.svg#Icons') format('svg');
+}
+[class*='icon-']:before{
+   font-family: $icon_font_name;
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+
+.icon-02-kievstar:before {
+	content:'\E001';
+}
+.icon-arrow-down:before {
+	content:'\E002';
+}
+.icon-arrow:before {
+	content:'\E003';
+}
+.icon-arrowandcircle:before {
+	content:'\E004';
+}
+.icon-Bukva:before {
+	content:'\E005';
+}
+.icon-bukva_fon:before {
+	content:'\E006';
+}
+.icon-calendar:before {
+	content:'\E007';
+}
+.icon-calendar2:before {
+	content:'\E008';
+}
+.icon-cancel:before {
+	content:'\E009';
+}
+.icon-city:before {
+	content:'\E00A';
+}
+.icon-close-envelope:before {
+	content:'\E00B';
+}
+.icon-Dialog:before {
+	content:'\E00C';
+}
+.icon-facebook-logo:before {
+	content:'\E00D';
+}
+.icon-fbcircle:before {
+	content:'\E00E';
+}
+.icon-forma:before {
+	content:'\E00F';
+}
+.icon-gloves:before {
+	content:'\E010';
+}
+.icon-instacircle:before {
+	content:'\E011';
+}
+.icon-instagram-logo:before {
+	content:'\E012';
+}
+.icon-Kvadrat:before {
+	content:'\E013';
+}
+.icon-Kvadrat_border:before {
+	content:'\E014';
+}
+.icon-Kvadrat_dlya_fona:before {
+	content:'\E015';
+}
+.icon-Kvadrat_dlya_ikonok:before {
+	content:'\E016';
+}
+.icon-Kvadrat_small:before {
+	content:'\E017';
+}
+.icon-lifecell:before {
+	content:'\E018';
+}
+.icon-Listai_vniz:before {
+	content:'\E019';
+}
+.icon-logo-mini:before {
+	content:'\E01A';
+}
+.icon-Logo:before {
+	content:'\E01B';
+}
+.icon-logotext:before {
+	content:'\E01C';
+}
+.icon-logo_small:before {
+	content:'\E01D';
+}
+.icon-magnifier:before {
+	content:'\E01E';
+}
+.icon-menu:before {
+	content:'\E01F';
+}
+.icon-microscope:before {
+	content:'\E020';
+}
+.icon-molecule:before {
+	content:'\E021';
+}
+.icon-phone-call:before {
+	content:'\E022';
+}
+.icon-phone-mini:before {
+	content:'\E023';
+}
+.icon-placeholder:before {
+	content:'\E024';
+}
+.icon-playvideo:before {
+	content:'\E025';
+}
+.icon-plus-black-symbol:before {
+	content:'\E026';
+}
+.icon-question:before {
+	content:'\E027';
+}
+.icon-Right-arrow:before {
+	content:'\E028';
+}
+.icon-search:before {
+	content:'\E029';
+}
+.icon-share:before {
+	content:'\E02A';
+}
+.icon-skype:before {
+	content:'\E02B';
+}
+.icon-Strelka_pop_ap:before {
+	content:'\E02C';
+}
+.icon-Strelka_pop_ap_left:before {
+	content:'\E02D';
+}
+.icon-two-quotes:before {
+	content:'\E02E';
+}
+.icon-vk-social-network-logo:before {
+	content:'\E02F';
+}
+.icon-vkcircle:before {
+	content:'\E030';
+}
+.icon-vodafone:before {
+	content:'\E031';
+}
+.icon-Vrachiicon:before {
+	content:'\E032';
+}
