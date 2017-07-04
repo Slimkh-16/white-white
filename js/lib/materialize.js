@@ -1674,6 +1674,7 @@ if (jQuery) {
             tooltipDelay,
             tooltipPosition,
             tooltipText,
+            //tooltipTextHead,
             tooltipEl,
             backdrop;
         var setAttributes = function() {
@@ -1685,6 +1686,7 @@ if (jQuery) {
           tooltipPosition = (tooltipPosition === undefined || tooltipPosition === '') ?
               options.position : tooltipPosition;
           tooltipText = origin.attr('data-tooltip');
+            //tooltipTextHead = origin.attr('data-tooltip-head');
           tooltipText = (tooltipText === undefined || tooltipText === '') ?
               options.tooltip : tooltipText;
         };
@@ -1697,7 +1699,8 @@ if (jQuery) {
           if (allowHtml) {
             tooltipText = $('<span></span>').html(tooltipText);
           } else{
-            tooltipText = $('<span></span>').text(tooltipText);
+              tooltipText = $('<span></span>').text(tooltipText);
+            // tooltipText = $('<span></span>').html('<b>' + tooltipTextHead + '</b>' + tooltipText)
           }
 
           // Create tooltip

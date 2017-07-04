@@ -1,0 +1,213 @@
+doctype html
+html
+  head
+    include _head
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.inner-page
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот 
+        a(href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank") инструкции,
+        | как включить JavaScript в вашем браузере. 
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    .page-wrap
+      //progress-box
+      .progress-counter.progress-counter--animating(style='top: 30%;')
+        .progress-counter__outer
+        .progress-counter__inner
+        .js-progress-counter 0%
+      include _left-fixed_nav
+      // wrapper start
+      .wrapper
+        // header SECTION
+        include _header
+        // header SECTION
+        // banner
+        section.banner
+          img(src="images/uslugi-bg.jpg",alt="")
+          .banner-caption
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='299px', height='300px', viewbox='0 0 299 300', enable-background='new 0 0 299 300', xml:space='preserve')
+              g
+                rect(x='45.754', y='26', fill='transparent', stroke='#ffffff', stroke-width='4', stroke-miterlimit='10', width='207.773', height='249.898')
+                rect(x='29', y='47.946', fill='transparent', stroke='#ffffff', stroke-width='4', stroke-miterlimit='10', width='241.262', height='206.017')
+              g
+                path(fill='#ffffff', d='M126.88,203.844l-4.467-0.01l-41.406-94.042l2.238-3.422h27.585v4.877H86.979l37.681,85.586l22.194-49.731\
+            				    l-16.431-37.31l2.239-3.422h33.947l2.229,3.432l-16.65,37.312l21.891,49.72l38.186-85.586H187.68v-4.877h28.346l2.229,3.432\
+            				    l-41.957,94.042l-4.467-0.01l-22.318-50.709L126.88,203.844z M136.396,111.248l13.145,29.842l13.317-29.842H136.396z')
+            span Услуги
+        //section info-box
+        section.info-box
+          .container
+            .info-box-cont
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod               bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo              commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et              magnis dis parturient montes, nascetur ridiculus mus.              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+        //uslugi section
+        section.services-section
+          .container
+            .row
+              .col.l6.s12.align-center.visible
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.l6.s12.align-center.visible
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.l6.s12.align-center.animated(data-animation="InDown")
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.l6.s12.align-center.animated(data-animation="InDown")
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.s12.animated(data-animation="InDown")
+                .feed-sect
+                  span Остались вопросы? Задайте их нам
+                  a(href="#modal1").modal-trigger.btn.waves-effect.waves-light Бесплатная консультация
+              .col.l6.s12.align-center.animated(data-animation="InDown")
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.l6.s12.align-center.animated(data-animation="InDown")
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.l6.s12.align-center.animated(data-animation="InDown")
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.l6.s12.align-center.animated(data-animation="InDown")
+                a(href="#").service-item
+                  .service-item__img(style="background:url(assets/images/serv1.jpg) no-repeat 50% 50%;")
+                    .serv-romb
+                    img(src="assets/images/serv1.jpg",alt="")
+                  .service-item__txt
+                    span.serv-part Диагностика
+                    span.serv-head Конусно - лучевая компьютерная томография
+                    p Для получения прицельных снимков зубов наша клиника оборудована новейшим радиовизиографом.
+                    span.detail
+                      | Подробнее
+                      span.to-next-ic
+                        img(src='images/arrow-right.png', alt='')
+              .col.s12.animated(data-animation="InDown")
+                .feed-sect
+                  span Остались вопросы? Задайте их нам
+                  a(href="#modal1").modal-trigger.btn.waves-effect.waves-light Бесплатная консультация
+
+        //contact section
+        section.contact-section
+          .mab-box.animated(data-animation="InDown")
+            #map(data-coords="50.000868, 36.239149")
+          .container.animated(data-animation="InDown")
+            .row
+              .contact-box
+                .contact-box-head Как нас найти?
+                address м. Архитектора Бекетова/м. Университет, ул. Алчевских (Артема), 2
+                ul.phone-group
+                  li.icon-vodafone
+                    a(href='tel:0950550203') (095) 055 02 03
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-lifecell
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-02-kievstar
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-close-envelope
+                    a(href='mailto:smile.house.kh@gmail.com') smile.house.kh@gmail.com
+                  li.icon-skype
+                    a(href='skype:smile.house.kh') smile.house.kh
+                  li.icon-phone-mini
+                    a(href='tel:0505742668') (050) 574 26 68
+              .col.l7.m12.s12.right
+                .contact-form.animated-delay300.animated(data-animation="InDown")
+                  form(action="#").form.js_validate
+                    .form-head Связяться с нами
+                    .row
+                      .col.l6.m12.s12
+                        .input-field.required-field(data-error='Required field')
+                          input#input10(type="text",required)
+                          label(for="input10") Имя*
+                      .col.l6.m12.s12
+                        .input-field.required-field(data-error='Required field')
+                          input#input11(type="tel",required)
+                          label(for="input11") Телефон*
+                    .input-field.required-field(data-error='Required field')
+                      textarea.materialize-textarea#input12(required)
+                      label(for="input12") Сообщение*
+                    button.btn.btn--shadow.waves-effect.waves-light(type='submit') Отправить
+      //footer
+      include _footer
+

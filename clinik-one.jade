@@ -1,0 +1,131 @@
+doctype html
+html
+  head
+    include _head
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.inner-page
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот 
+        a(href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank") инструкции,
+        | как включить JavaScript в вашем браузере. 
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    .page-wrap
+      //progress-box
+      .progress-counter.progress-counter--animating(style='top: 30%;')
+        .progress-counter__outer
+        .progress-counter__inner
+        .js-progress-counter 0%
+      include _left-fixed_nav
+      // wrapper start
+      .wrapper
+        // header SECTION
+        include _header
+        // header SECTION
+        // banner
+        section.banner
+          img(src="images/clinik-bg.jpg",alt="")
+          .breadcrumbs
+            ul
+              li
+                a(href="#") Клинические случаи
+              li
+                span Случай 1
+          .banner-caption
+
+            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='299px', height='300px', viewbox='0 0 299 300', enable-background='new 0 0 299 300', xml:space='preserve')
+              g
+                rect(x='45.754', y='26', fill='transparent', stroke='#ffffff', stroke-width='4', stroke-miterlimit='10', width='207.773', height='249.898')
+                rect(x='29', y='47.946', fill='transparent', stroke='#ffffff', stroke-width='4', stroke-miterlimit='10', width='241.262', height='206.017')
+              g
+                path(fill='#ffffff', d='M126.88,203.844l-4.467-0.01l-41.406-94.042l2.238-3.422h27.585v4.877H86.979l37.681,85.586l22.194-49.731\
+            				    l-16.431-37.31l2.239-3.422h33.947l2.229,3.432l-16.65,37.312l21.891,49.72l38.186-85.586H187.68v-4.877h28.346l2.229,3.432\
+            				    l-41.957,94.042l-4.467-0.01l-22.318-50.709L126.88,203.844z M136.396,111.248l13.145,29.842l13.317-29.842H136.396z')
+            span Случай 1
+        //section info-box
+        section.info-box
+          .container
+            .info-box-cont
+              p Гигиена полости рта – это самый простой, дешевый и безболезненный способ избежать проблем с зубами и частых походов в стоматологическую клинику. Правильный домашний уход может стать настоящей преградой для развития болезнетворных бактерий. Да и сам организм помогает человеку в этом: слизистая обладает специальными барьерами, слюна выделяет лизоцим и т.д. Однако современные условия требуют от нас больше и больше мер предосторожности, ведь микрофлора приспосабливается к тем ли иным факторам, и обычной чистки зубов становится недостаточно.
+        //post section
+        section.post-section
+          .container
+            .row.animated(data-animation="InDown")
+              .col.l6.s12.post-img
+                img(src="assets/images/clinik.jpg",alt="")
+              .col.l6.s12.post-info.post-info--right
+                span.post-info__head Случай 1
+                p Пациент обратился по поводу пульпита 48 зуба. Пациент был направлен из другой клиники г.Винницы из-за сложности случая. На рентгенограмме определяется сложная анатомия корневых каналов. После проведенной мандибулярной анестезии, зуб был трепанирован специальным бором по Мартину, доступ сделан Gates №6 и ультразвуковой насадкой Tufi №2, лечение проводится под микроскопом с коффердамом, ирригация: гипохлорид натрия 5,25%, Smear Clear 17%, лимонная кислота 40%, дистиллированная вода.
+            .row.post-center.align-center.animated(data-animation="InDown")
+              .col.l8.s12.align-left
+                ul
+                  li Зубную щетку нужно менять каждые 3 месяца. За это время ее ворсинки изнашиваются и могут принести вред, а не пользу.
+                  li Чистить зубы нужно не более двух раз в день, дабы не повредить зубную эмаль. Если после еды есть необходимость очистить поверхность зубов, сделайте это с помощью травяного настоя либо специального лосьона.
+                  li В идеале зубнAая щетка должна быть жесткой, с маркировкой HARD. Такая не только эффективно почистит зубы, но и помассажирует десну.
+                  li Для межзубных промежутков, в которых иногда застревает еда, применяйте специальные нити, а не зубочистки. Последние могут травмировать нежную кожицу десны.
+                  li Правильная техника чистки: от десны до режущего края, подметающими, не жесткими движениями, не менее 3-х минут.
+                  li Не страшно, если зубная паста будет плохо выполоскана. В ней содержится целый набор полезных антисептических добавок.
+                p Не страшно, если зубная паста будет плохо выполоскана. В ней содержится целый набор полезных антисептических добавок.
+            .row.animated(data-animation="InDown")
+              .col.l6.s12.post-info.post-info--left
+                p  Механическая обработка проводилась с             помощью эндомотора Nouvag со встроенным апекслокатором, никель - титановым инструментом Pro Taper S1, S2, F1, F2, F3. Рабочая длина измерялась апекслокатором, и был сделан контрольный снимок с инструментами (рис. 3), на котором определяется 4 корневых канала.
+              .col.l6.s12.post-img
+                img(src="assets/images/clinik2.jpg",alt="")
+            .share-box
+              span Поделиться:
+              a(href="#").icon-vkcircle
+              a(href="#").icon-fbcircle
+        //contact section
+        section.contact-section
+          .mab-box.animated(data-animation="InDown")
+            #map(data-coords="50.000868, 36.239149")
+          .container.animated(data-animation="InDown")
+            .row
+              .contact-box
+                .contact-box-head Как нас найти?
+                address м. Архитектора Бекетова/м. Университет, ул. Алчевских (Артема), 2
+                ul.phone-group
+                  li.icon-vodafone
+                    a(href='tel:0950550203') (095) 055 02 03
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-lifecell
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-02-kievstar
+                    a(href='tel:0505742668') (050) 574 26 68
+                  li.icon-close-envelope
+                    a(href='mailto:smile.house.kh@gmail.com') smile.house.kh@gmail.com
+                  li.icon-skype
+                    a(href='skype:smile.house.kh') smile.house.kh
+                  li.icon-phone-mini
+                    a(href='tel:0505742668') (050) 574 26 68
+              .col.l7.m12.s12.right
+                .contact-form.animated-delay300.animated(data-animation="InDown")
+                  form(action="#").form.js_validate
+                    .form-head Связяться с нами
+                    .row
+                      .col.l6.m12.s12
+                        .input-field.required-field(data-error='Required field')
+                          input#input10(type="text",required)
+                          label(for="input10") Имя*
+                      .col.l6.m12.s12
+                        .input-field.required-field(data-error='Required field')
+                          input#input11(type="tel",required)
+                          label(for="input11") Телефон*
+                    .input-field.required-field(data-error='Required field')
+                      textarea.materialize-textarea#input12(required)
+                      label(for="input12") Сообщение*
+                    button.btn.btn--shadow.waves-effect.waves-light(type='submit') Отправить
+      //footer
+      include _footer
+

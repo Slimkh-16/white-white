@@ -65,6 +65,25 @@ footer.footer
         .col.l6.m6.s12.align-right
           | Разработка и поддержка сайта -
           a(href="http://artjoker.ua",target="_blank") Artjoker
+#modal1.modal
+  .modal-content
+    span.modal-action.modal-close.modal-close--top
+      span.icon-cancel
+    .form-fast.visible
+      .form-fast__head
+        | Бесплатная консультация
+        span Напишите свое имя и номер телефона   и мы Вам перезвоним
+      form.js_validate.align-center(action='#')
+        .row
+          .col.l6.s12
+            .input-field.required-field(data-error='Required field')
+              input#field111(type='text', required='')
+              label(for='field111') Как Вас зовут?*
+          .col.l6.s12
+            .input-field.required-field(data-error='Required field')
+              input#field112(type='text', required='')
+              label(for='field112') Куда Вам позвонить?*
+        button.btn.waves-light.waves-effect(type='submit') Отправить
 #modal-thank.modal
   .modal-content
     span.modal-action.modal-close.modal-close--top

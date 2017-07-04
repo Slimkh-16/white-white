@@ -35,7 +35,7 @@ html
         // header SECTION
         // banner
         section.banner
-          img(src="images/contact-bg.jpg",alt="")
+          img(src="images/clinik-bg2.jpg",alt="")
           .banner-caption
             svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='299px', height='300px', viewbox='0 0 299 300', enable-background='new 0 0 299 300', xml:space='preserve')
               g
@@ -45,82 +45,63 @@ html
                 path(fill='#ffffff', d='M126.88,203.844l-4.467-0.01l-41.406-94.042l2.238-3.422h27.585v4.877H86.979l37.681,85.586l22.194-49.731\
             				    l-16.431-37.31l2.239-3.422h33.947l2.229,3.432l-16.65,37.312l21.891,49.72l38.186-85.586H187.68v-4.877h28.346l2.229,3.432\
             				    l-41.957,94.042l-4.467-0.01l-22.318-50.709L126.88,203.844z M136.396,111.248l13.145,29.842l13.317-29.842H136.396z')
-            span Контакты
+            span Клинические случаи
         //section info-box
         section.info-box
           .container
             .info-box-cont
               p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod               bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo              commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et              magnis dis parturient montes, nascetur ridiculus mus.              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
-        //acccordion section
-        section.contact-page.animated(data-animation="InDown")
+        //our comand section
+        section.news-page
           .container
+            .news-navigate
+              ul
+                li
+                  span Все случаи
+                li
+                  a(href="#") Тег 1
+                li
+                  a(href="#") Тег 2
+                li
+                  a(href="#") Тег 3
+            .news-container
+              .row
+                mixin news-item(title)
+                  .col.l3.m4.s6
+                    a(href="#").article-item
+                      span.article-img
+                        span
+                          img(src="assets/images/news.jpg",alt="")
+                      span.article-txt
+                        b=title
+                        | Мы ценим каждого нашего клиента
+                        | и готовы всегда помочь ему в
+                        | решении его проблем
+                        span.news-date
+                          span.icon-calendar2
+                          | 20 сентября 2016
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+                +news-item('Случай')
+              .pagination-box
+                ul
+                  li
+                    span 1
+                  li
+                    a(href="#") 2
+                  li ...
+                  li
+                    a(href="#") 7
 
-            .work-time-list
-              span Мы работаем:
-              ul
-                li Понедельник : 8:00 - 20:00
-                li Вторник : 8:00 - 20:00
-                li Среда : 8:00 - 20:00
-                li Четверг : 8:00 - 20:00
-                li Пятница : 8:00 - 20:00
-                li Суббота : 8:00 - 20:00
-                li Воскресенье : не рабочий день
-            .social-box
-              span Мы в социальных сетях:
-              ul
-                li
-                  a(href="#").icon-vkcircle vk.com/smilehousekh
-                li
-                  a(href="#").icon-fbcircle facebook.com/smile.house.kh/
-                li
-                  a(href="#").icon-instacircle facebook.com/smile.house.kh/
-            .regulations-form-box
-              .regulations-form-box__head Записаться на прием
-              form(action="#").js_validate
-                .row
-                  .col.l6.m6.s12
-                    .input-field.required-field(data-error='Required field')
-                      input#input1(type="text",required)
-                      label(for="input1") Имя*
-                  .col.l6.m6.s12
-                    .input-field.required-field(data-error='Required field')
-                      input#input2(type="tel",required,data-validate="phone")
-                      label(for="input2") Телефон*
-                  .col.l6.m6.s12
-                    .input-field.required-field(data-error='Required field')
-                      input#input3(type="email",required,data-validate="email")
-                      label(for="input3") E-mail*
-                  .col.l6.m6.s12
-                    .input-field.required-field(data-error='Required field')
-                      input#input4(type="text",required)
-                      label(for="input4") Страна, город*
-                .row
-                  span.label-field Причины обращения
-                  .col.l6.m6.s12
-                    .check-item
-                      input#check1.filled-in(type='checkbox', checked='checked')
-                      label(for='check1') Острая боль
-                    .check-item
-                      input#check2.filled-in(type='checkbox')
-                      label(for='check2') Эстетика
-                    .check-item
-                      input#check3.filled-in(type='checkbox')
-                      label(for='check3') Детская стоматология
-                  .col.l6.m6.s12
-                    .check-item
-                      input#check4.filled-in(type='checkbox', checked='checked')
-                      label(for='check4') Проблемы с деснами
-                    .check-item
-                      input#check5.filled-in(type='checkbox')
-                      label(for='check5') Чувствительность
-                    .check-item
-                      input#check6.filled-in(type='checkbox')
-                      label(for='check6') Другое
-                button(type="submit").center-button.btn.waves-effect.waves-light Отправить
-                .warn-box
-                  | Мы свяжемся с Вами в ближайшее время
-                  br
-                  | для согласования деталей
         //contact section
         section.contact-section
           .mab-box.animated(data-animation="InDown")
