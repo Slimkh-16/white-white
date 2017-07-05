@@ -14,7 +14,7 @@ function preloader() {
         scrollTopPosition,
         browserYou,
         _winWidth = $(window).outerWidth(),
-        swiper4, swiper5,swiper2,containerHeight;
+         swiper_big,containerHeight;
     var genFunc = {
 
         initialized: false,
@@ -478,7 +478,8 @@ function preloader() {
             var swiper_new = new Swiper('.new-product .swiper-container', {
                 loop: true,
                 speed: 1000,
-                slidesPerView: 4,
+                //slidesPerView: 4,
+                height:115,
                 spaceBetween: 0,
                 breakpoints: {
                     992: {
@@ -492,6 +493,36 @@ function preloader() {
                     }
                 }
             });
+            var swiper_thumb = new Swiper('.serv-thumb-slider .swiper-container', {
+                loop: false,
+                direction: 'vertical',
+                speed: 1000,
+                height:115,
+                //slidesPerView: 4,
+                spaceBetween:25
+            });
+            swiper_big = new Swiper('.serv-big-slider .swiper-container', {
+                loop: false,
+                speed: 1500,
+                slidesPerView: 1,
+                simulateTouch: false,
+                grabCursor: false,
+                centeredSlides: false,
+            });
+            if (document.querySelector('.serv-thumb-slider') !== null) {
+                var elem = document.querySelectorAll('.serv-thumb-slider .swiper-slide');
+                for (var i = 0; i < elem.length; i++) {
+                    elem[i].addEventListener('click', function () {
+                        var indexSlide = parseInt(this.getAttribute('data-slide') - 1);
+                        for (var k = 0; k < elem.length; k++) {
+                            elem[k].classList.remove('active');
+                        }
+                        this.classList.add('active');
+                        swiper_big.slideTo(indexSlide);
+                    });
+                }
+            }
+
         },
         pagePreloader: function () {
             window.addEventListener('load', function () {
@@ -591,6 +622,7 @@ function preloader() {
             }
         },
         materialPlagins: function () {
+            $('ul.tabs').tabs();
             $('.tooltipped').tooltip({delay: 50});
             if($('.contact-box .phone-group').length){
               $('.contact-box .phone-group').autocolumnlist({

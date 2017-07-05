@@ -84,6 +84,35 @@ footer.footer
               input#field112(type='text', required='')
               label(for='field112') Куда Вам позвонить?*
         button.btn.waves-light.waves-effect(type='submit') Отправить
+#modal-free.modal
+  .modal-content
+    span.modal-action.modal-close.modal-close--top
+      span.icon-cancel
+    .modal-img(style="background:url(images/modal.jpg)")
+    .form-fast.visible
+      .form-fast__head
+        | Онлайн-запрос
+      form.js_validate.align-center(action='#')
+        .row
+          .col.l6.s12
+            .input-field.required-field(data-error='Required field')
+              input#field32(type='text', required='')
+              label(for='field32') Имя*
+          .col.l6.s12
+            .input-field.required-field(data-error='Required field')
+              input#field33(type='tel',data-validate="phone",required='')
+              label(for='field33') Тел*
+          .col.s12
+            .input-field.required-field(data-error='Required field')
+              textarea#field34.materialize-textarea(required='')
+              label(for='field34') Сообщение*
+          .col.s12
+            .capcha capcha
+          .col.s12
+            .check-item
+              input#check12.filled-in(type="checkbox",required)
+              label(for="check12") Я согласен на обработку моих персональных данных
+        button.btn.waves-light.waves-effect(type='submit') Отправить
 #modal-thank.modal
   .modal-content
     span.modal-action.modal-close.modal-close--top
