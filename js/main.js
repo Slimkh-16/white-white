@@ -45,6 +45,12 @@ function preloader() {
             if ((browserYou.browser == 'ie')) {
                 document.documentElement.classList.add('ie');
             }
+            if ((browserYou.browser == 'ie')) {
+                document.documentElement.classList.add('ie');
+            }
+            if(navigator.userAgent.search(/Macintosh/) > -1){
+                document.documentElement.classList.add('macintosh');
+            }
             if ((browserYou.browser == 'ie' && browserYou.versionShort < 9) || ((browserYou.browser == 'opera' || browserYou.browser == 'operaWebkit') && browserYou.versionShort < 18) || (browserYou.browser == 'firefox' && browserYou.versionShort < 30)) {
                 alert('Обновите браузер');
             }
@@ -115,7 +121,7 @@ function preloader() {
                     TweenMax.set($img2, {transformStyle: 'preserve-3d'});
                     TweenMax.set($img3, {transformStyle: 'preserve-3d'});
 
-                    $body.mousemove(function (e) {
+                    $('.first-section ').mousemove(function (e) {
 
                         var sxPos = e.pageX / $body.width() * 100 - 50;
                         var syPos = e.pageY / $body.height() * 100 - 50;
@@ -370,6 +376,17 @@ function preloader() {
                 $('.js_fast_form').toggleClass('open');
                 $('.form-fast').toggleClass('visible');
             });
+            $(document).on('click', function (e) {
+                if ($(e.target).closest(".form-fast,.js_fast_form").length) {
+                    return;
+                }
+                $('.form-fast').removeClass('visible');
+                $('.js_fast_form').removeClass('open');
+            });
+            $('.form-fast-close').on('click',function(){
+                $('.form-fast').removeClass('visible');
+                $('.js_fast_form').removeClass('open');
+            });
         },
         copyright: function () {
             var yearBlock = document.querySelector('.yearN'),
@@ -540,8 +557,22 @@ function preloader() {
                 $(this).parents('form').toggleClass('act');
             });
             $('.js_validate button[type="submit"]').on("click", function () {
+                buttonProgress($(this));
                 return validate($(this).parent(".js_validate"));
             });
+            function buttonProgress(elem) {
+                var _tB = elem;
+                _tB.find('.progress').animate({
+                    width: "100%"
+                },1000);
+                setTimeout(function(){
+                    _tB.addClass('state-success');
+                },1100);
+                setTimeout(function(){
+                    _tB.removeClass('state-success');
+                    _tB.find('.progress').css('width','0');
+                },2000);
+            }
             function validate(form) {
                 var error_class = "error";
                 var norma_class = "pass";
@@ -731,7 +762,10 @@ function preloader() {
     window.addEventListener('load', function () {
         if(document.querySelector('.next-step') !== null) {
             document.querySelector('.js_next').addEventListener('click',function(){
-                scrollTo(document.body,document.querySelector('.peop-section').offsetTop + 5 , 1000);
+                $('body,html').animate({
+                    scrollTop : $('.peop-section').offset().top + 5
+                },1000,"easeInOutExpo");
+                // scrollTo(document.body, , 1000);
             });
         }
         if(document.querySelector('.slider') !== null) {
@@ -779,7 +813,7 @@ function preloader() {
     };
     function scrollTo(element, to, duration) {
         var start = element.scrollTop ;
-        if(browserYou.browser === 'firefox') {
+        if(browserYou.browser === 'firefox'  || browserYou.browser === 'ie11') {
             start = document.documentElement.scrollTop
         }
         var change = to - start,
@@ -790,7 +824,7 @@ function preloader() {
             currentTime += increment;
             var val = Math.easeInOutExpo(currentTime, start, change, duration);
             element.scrollTop = val;
-            if(browserYou.browser === 'firefox') {
+            if(browserYou.browser === 'firefox' || browserYou.browser === 'ie11') {
                 document.documentElement.scrollTop = val;
             }
             if(currentTime < duration) {
@@ -812,3 +846,4 @@ function preloader() {
         return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
     }
 })();
+

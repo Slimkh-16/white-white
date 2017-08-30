@@ -116,7 +116,10 @@ html
                     .check-item
                       input#check6.filled-in(type='checkbox')
                       label(for='check6') Другое
-                button(type="submit").center-button.btn.waves-effect.waves-light Отправить
+                //button(type="submit").center-button.btn.waves-effect.waves-light Отправить
+                button.progress-button.center-button.btn.waves-effect.waves-light(type="submit")
+                  span.content Отправить
+                  span.progress
                 .warn-box
                   | Мы свяжемся с Вами в ближайшее время
                   br
@@ -160,7 +163,10 @@ html
                     .input-field.required-field(data-error='Required field')
                       textarea.materialize-textarea#input12(required)
                       label(for="input12") Сообщение*
-                    button.btn.btn--shadow.waves-effect.waves-light(type='submit') Отправить
+                    //button.btn.btn--shadow.waves-effect.waves-light(type='submit') Отправить
+                    button.progress-button.btn.waves-effect.waves-light(type="submit")
+                      span.content Отправить
+                      span.progress
       //footer
       include _footer
 

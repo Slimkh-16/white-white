@@ -171,7 +171,7 @@ h5 {
       text-align: center;
       cursor: pointer;
       color: #505050;
-      font-size: 20px;
+      font-size: 24px;
       &:hover {
         color: $th;
       }
@@ -179,6 +179,7 @@ h5 {
         cursor: pointer;
         background: #ee6161;
         color: #fff;
+        line-height: 66px;
         @include anim;
         span {
           display: inline-block;
@@ -661,11 +662,24 @@ h5 {
     line-height: 43px;
     left: 15px;
     top: 0;
+    font-size: 13px;
     &.active {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
+  }
+}
+.form-fast-close {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+  color: $t;
+  @include anim;
+  &:hover {
+    color: $th;
   }
 }
 .form-fast__head {
@@ -740,6 +754,58 @@ h5 {
     color: #fff;
   }
 }
+.progress-button {
+  position: relative;
+  overflow: hidden;
+  &:hover,&:focus {
+    background: #181818;
+  }
+}
+.progress-button .progress {
+  top: 0;
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  background: #ee6161;
+}
+.progress-button .content {
+  position: relative;
+  z-index: 3;
+  display: block;
+  transition: transform 0.3s;
+}
+.progress-button .content:before{
+  position: absolute;
+  top: 100%;
+  right: auto;
+  left: 50%;
+  line-height: 65px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.progress-button.state-success .content, .progress-button.state-error .content {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.progress-button.state-success .content::before, .progress-button.state-error .content::after {
+  opacity: 1;
+}
+.progress-button .content:before {
+  font-family:"Icons";
+  @extend .icon-w-checkbox;
+}
+.progress-button .progress-inner {
+  top: 0;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: #ee6161;
+}
 //.first-section
 .first-section {
   height: 100%;
@@ -793,7 +859,7 @@ h5 {
   bottom:50px;
   z-index:55;
   margin: -20px 0 0 -20px;
-  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
   border-left: none;
   border-top: none;
   border-right: 2px #b8b8b8 solid;
@@ -1057,6 +1123,7 @@ h5 {
     margin: auto;
     background: #f7f7f7;
     pointer-events: none;
+    display: none;
   }
 }
 .our-plus .row {
@@ -2269,6 +2336,12 @@ svg {
   }
 
 }
+.ie .sertificat-section .swiper-slide {
+  width: 100% !important;
+  -webkit-transform: translateX(0) !important;
+  -ms-transform: translateX(0) !important;
+  transform: translateX(0) !important;
+}
 .swiper-button-prev,.swiper-button-next {
   @include anim;
   .to-next-ic {
@@ -2386,6 +2459,7 @@ svg {
 
 .contact-box {
   @extend .work-time-box;
+  padding:55px 40px;
   address {
     display: block;
     font-style: normal;
@@ -2433,6 +2507,7 @@ svg {
 }
 .contact-section  {
   padding:0 0 75px;
+  padding-left: 70px;
   .container {
     position: relative;
   }
@@ -2601,7 +2676,7 @@ svg {
  {
   font-size:12px;
 }
-.mobile .phone-group li:before {
+.mobile .phone-group li:before,.macintosh .phone-group li:before {
   top: 0;
   line-height: 20px;
 }
@@ -2625,6 +2700,7 @@ svg {
 .banner {
   position: relative;
   overflow: hidden;
+  max-width: 100%;
   &:before {
     content: '';
     position: absolute;
@@ -2678,8 +2754,8 @@ svg {
 }
 .accordion-right {
   position: absolute;
-  left: calc(1200px + 20px);
-  top: 100px;
+  left: calc(1200px + 30px);
+  top: 15px;
   z-index: 5;
   opacity: 0;
   transform: translateX(20px);
@@ -2734,7 +2810,7 @@ svg {
   }
 }
 .accordion-box {
-  width:1200px;
+  width:1205px;
   max-width: 100%;
   min-height: 700px;
   .collapsible {
@@ -2766,7 +2842,7 @@ svg {
   .collapsible-header {
     border-bottom: 1px solid #ececec;
     padding:15px;
-    padding-left: 130px;
+    padding-left: 193px;
     min-height: 1px;
     line-height: 22px;
     font-size: 18px;
@@ -2799,7 +2875,7 @@ svg {
   }
 }
 .header-accordion {
-  padding:0 0 35px 125px;
+  padding:0 0 35px 193px;
   border-bottom: 1px solid #ececec;
   font-size: 18px;
   line-height: 24px;
@@ -3220,6 +3296,9 @@ svg {
     border:1px solid #fff;
     border-radius:50%;
   }
+}
+.comand-item__txt {
+  display: none;
 }
 .command-group:hover {
   .command-item {
@@ -3762,6 +3841,9 @@ svg {
   position: static;
   border:none;
   width: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .modal-close--top {
   position: absolute;
@@ -4174,6 +4256,8 @@ svg {
   .page-wrap {
     padding-left: 70px;
   }
+  .contact-section {
+    padding-left: 0;}
   .progress-counter {
     right: 50px;
   }
@@ -4386,6 +4470,9 @@ svg {
     margin-bottom: 50px;
 
   }
+  .command-group:hover {
+    box-shadow: none;
+  }
   .education-small .image-box {
     left: 0;
     right: 0;
@@ -4427,7 +4514,7 @@ svg {
     padding: 0;
   }
   .command-group {
-    width: 32% !important;
+    width: 100% !important;
     height: auto !important;
     border-radius: 0;
     position: static !important;
@@ -4447,8 +4534,8 @@ svg {
   .command-group .comand-group-gen {
     width: auto;
     color: $t;
-    font-size: 22px !important;
-    line-height: 26px !important;
+    font-size: 24px !important;
+    line-height: 28px !important;
   }
   .command-item-cont {
     padding: 25px 0 0;
@@ -4457,11 +4544,34 @@ svg {
   }
 
   .command-item {
-    width: 50px;
-    height: 50px;
-    margin: 0 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+    width:250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 5px 15px;
     visibility: visible;
     opacity: 1;
+    overflow:visible;
+    border-radius: 0;
+  }
+  .command-item:after {
+    display: none;}
+  .command-item__img {
+    width: 70px;
+    height: 70px;
+    margin:0 auto 15px;
+  }
+  .comand-item__txt {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    b{
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+      @include fb;
+    }
   }
   .news-navigate {
     margin-bottom: 30px;}
@@ -4629,9 +4739,9 @@ svg {
   .post-center {
     padding: 30px 0;
   }
-  .command-group {
-    width: 49% !important;
-  }
+  //.command-group {
+  //  width: 49% !important;
+  //}
   .news-navigate ul li span, .news-navigate ul li a {
     min-width:1px;
   }
@@ -4666,7 +4776,7 @@ svg {
     float:none;
   }
   .banner img {
-    min-width: 767px;
+    min-width: 820px;
   }
   .accordion-right {
     top: 0;
@@ -4817,14 +4927,14 @@ svg {
     height: 400px;
   }
   .command-group .comand-group-gen {
-    font-size: 18px !important;
+    font-size: 20px !important;
   }
   .command-item-cont {
     padding: 10px 0 0;
   }
-  .command-group {
-    width: 100% !important;
-  }
+  //.command-group {
+  //  width: 100% !important;
+  //}
   .news-container .row .col.s6 {
     width: 50%;
   }
@@ -4947,6 +5057,9 @@ svg {
 
 }
 @media only screen and (max-width: 599px) {
+  .command-group {
+    padding: 0;
+  }
   .education-info {
     padding: 0;}
   .education-small .education-info {
@@ -5270,11 +5383,11 @@ svg {
   .news-container .row .col.s6 {
     width: 100%;
   }
-  .left-container-nav ul li:not(.last) {
-    display: none;
-  }
-  .left-fixed-nav__bottom {
-    display: none;}
+  //.left-container-nav ul li:not(.last) {
+  //  display: none;
+  //}
+  //.left-fixed-nav__bottom {
+  //  display: none;}
   .form-fast {
     max-height: 100vh;
     overflow-y: auto;
@@ -5283,12 +5396,15 @@ svg {
     }
   }
 }
-@media only screen and (max-width: 767px) and (max-height: 500px) {
-  .left-container-nav ul li:not(.last) {
-    display: none;
+@media only screen and (max-width: 767px) and (max-height: 520px) {
+  //.left-container-nav ul li:not(.last) {
+  //  display: none;
+  //}
+  .left-fixed-nav__body .left-fixed-nav__over ul {
+    margin-top: 10px;
   }
-  .left-fixed-nav__bottom {
-    display: none;}
+  //.left-fixed-nav__bottom {
+  //  display: none;}
   .form-fast {
     max-height: 100vh;
     overflow-y: auto;
@@ -5296,4 +5412,14 @@ svg {
       display: none;
     }
   }
+}
+@media only screen and (max-width: 767px) and (max-height: 450px) {
+  .left-fixed-nav__bottom {
+    display: none;}
+  .left-container-nav ul li:not(.last) {
+    display: none;
+  }
+}
+.mobile .open-menu {
+  height:100vh;
 }
